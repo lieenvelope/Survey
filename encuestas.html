@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Encuestas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema de Encuestas</h1>
+
+    <div id="crearEncuesta">
+        <h2>Crear Encuesta</h2>
+        <label for="tituloEncuesta">Título de la encuesta:</label>
+        <input type="text" id="tituloEncuesta"><br><br>
+
+        <label for="pregunta">Pregunta:</label>
+        <input type="text" id="pregunta">
+        <button onclick="agregarPregunta()">Agregar Pregunta</button><br><br>
+
+        <ul id="listaPreguntas"></ul>
+
+        <button onclick="guardarEncuesta()">Guardar Encuesta</button>
+    </div>
+
+    <hr>
+
+    <div id="responderEncuesta">
+        <h2>Responder Encuesta</h2>
+        <label for="seleccionarEncuesta">Selecciona una encuesta:</label>
+        <select id="seleccionarEncuesta" onchange="cargarEncuesta()">
+         
+        </select>
+
+        <div id="preguntasEncuesta">
+           
+        </div>
+
+        <button onclick="enviarRespuestas()">Enviar Respuestas</button>
+    </div>
+
+    <hr>
+
+    <div id="analizarEncuesta">
+        <h2>Analizar Encuesta</h2>
+        <label for="seleccionarEncuestaAnalisis">Selecciona una encuesta:</label>
+        <select id="seleccionarEncuestaAnalisis" onchange="analizarEncuesta()">
+           
+        </select>
+
+        <div id="resultadosAnalisis">
+           
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
+
